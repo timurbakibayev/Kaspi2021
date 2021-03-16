@@ -4,6 +4,7 @@ from chess import *
 
 class TestChessMethods(unittest.TestCase):
     def test_complex_ok(self):
+        #  Timur Bakibayev
         board = [
             ["BR", "BN", "BB", "BQ", "BK", "BB", "BN", "  "],
             ["BP", "BP", "BP", "  ", "BP", "BP", "  ", "  "],
