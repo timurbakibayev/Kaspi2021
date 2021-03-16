@@ -12,9 +12,9 @@ class TestChessMethods(unittest.TestCase):
         self.assertTrue(b_allowed((6,6), (4,4)))
         self.assertTrue(b_allowed((6,6), (4,8)))
 
-        self.assertFalse(b_allowed((1,2), (2,2), False))
-        self.assertFalse(b_allowed((1,2), (1,4), False))
-        self.assertFalse(b_allowed((6,6), (7,8), False))
+        self.assertFalse(b_allowed((1,2), (2,2)))
+        self.assertFalse(b_allowed((1,2), (1,4)))
+        self.assertFalse(b_allowed((6,6), (7,8)))
 
     def test_out_of_bounds(self):
         self.assertFalse(b_allowed((2, 2), (0, 0)))

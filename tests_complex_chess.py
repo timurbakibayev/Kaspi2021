@@ -26,6 +26,8 @@ class TestChessMethods(unittest.TestCase):
         self.assertFalse(board_move_ok((3,1), (2,2), board))
         self.assertFalse(board_move_ok((3,1), (1,3), board))
 
+        # Write your own tests and share with us!
+
 
 if __name__ == '__main__':
     unittest.main()

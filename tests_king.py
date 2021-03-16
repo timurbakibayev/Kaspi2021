@@ -14,7 +14,6 @@ class TestChessMethods(unittest.TestCase):
         self.assertTrue(k_allowed((3,3), (3,4)))
 
         self.assertFalse(k_allowed((3,3), (3,3)))
-        self.assertFalse(k_allowed((3,3), (3,3)))
 
 
     def test_out_of_bounds(self):
