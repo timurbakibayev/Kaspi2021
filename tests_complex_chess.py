@@ -1,6 +1,7 @@
 import unittest
 from chess import *
 
+
 class TestChessMethods(unittest.TestCase):
     def test_complex_ok(self):
         board = [
@@ -20,6 +21,9 @@ class TestChessMethods(unittest.TestCase):
 
         self.assertFalse(board_move_ok((1,2), (2,2), board))
         self.assertFalse(board_move_ok((1,2), (2,3), board))
+
+        self.assertFalse(board_move_ok((3,1), (2,2), board))
+        self.assertFalse(board_move_ok((3,1), (1,3), board))
 
 
 if __name__ == '__main__':
