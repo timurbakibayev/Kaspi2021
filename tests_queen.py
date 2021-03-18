@@ -57,6 +57,9 @@ class TestChessMethods(unittest.TestCase):
         self.assertFalse(q_allowed((3, 3), (-2, -2)))
         self.assertFalse(q_allowed((-2, -2), (3, 3)))
 
+    def test_queen_extra(self):
+        self.assertFalse(q_allowed((1, 1), (3, 8)))
+
 
 if __name__ == '__main__':
     unittest.main()

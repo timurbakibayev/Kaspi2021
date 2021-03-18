@@ -28,6 +28,7 @@ class TestChessMethods(unittest.TestCase):
         self.assertFalse(p_allowed((0, 5), (0, 4), False))
         self.assertFalse(p_allowed((9, 4), (9, 5), True))
         self.assertFalse(p_allowed((9, 5), (9, 4), False))
+        self.assertFalse(p_allowed((2, 9), (2, 10), True))
 
 
 if __name__ == '__main__':

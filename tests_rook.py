@@ -18,6 +18,9 @@ class TestChessMethods(unittest.TestCase):
         self.assertFalse(r_allowed((3,3), (5,5)))
         self.assertFalse(r_allowed((3,3), (1,1)))
 
+    def test_rook_additional(self):
+        self.assertTrue(r_allowed((1, 3), (3, 3)))
+
 
     def test_out_of_bounds(self):
         self.assertFalse(r_allowed((1, 1), (1, 0)))
