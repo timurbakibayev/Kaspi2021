@@ -17,8 +17,8 @@ def longest_chain(chain):
     return k
 
 
-class TestChessMethods(unittest.TestCase):
-    def test_p(self):
+class TestDominoMethods(unittest.TestCase):
+    def test_domino(self):
         self.assertEqual(longest_chain([(1,2),(2,3),(3,4)]),3)
         self.assertEqual(longest_chain([(2,1),(2,3),(3,4)]),2)
         self.assertEqual(longest_chain([(1,1),(2,3),(3,5),(5,6),(5,5),(7,3),(3,4),(4,5),(5,6),(1,1)]), 4)
@@ -28,4 +28,5 @@ class TestChessMethods(unittest.TestCase):
         self.assertEqual(longest_chain([]),0)
 
 
-unittest.main()
+if __name__ == '__main__':
+    unittest.main()

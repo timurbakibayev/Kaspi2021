@@ -3,6 +3,22 @@ from chess import *
 
 
 class TestChessMethods(unittest.TestCase):
+    def test_pe(self):
+        self.assertTrue(pe_allowed((5,5), (6,6), True))
+        self.assertTrue(pe_allowed((5,5), (4,6), True))
+        self.assertFalse(pe_allowed((5,5), (5,6), True))
+        self.assertFalse(pe_allowed((5,5), (5,7), True))
+        self.assertFalse(pe_allowed((5,5), (6,4), True))
+        self.assertFalse(pe_allowed((5,5), (4,4), True))
+
+        self.assertTrue(pe_allowed((5,5), (6,4), False))
+        self.assertTrue(pe_allowed((5,5), (4,4), False))
+        self.assertFalse(pe_allowed((5,5), (5,4), False))
+        self.assertFalse(pe_allowed((5,5), (5,3), False))
+        self.assertFalse(pe_allowed((5,5), (6,6), False))
+        self.assertFalse(pe_allowed((5,5), (4,6), False))
+
+
     def test_p(self):
         self.assertTrue(p_allowed((1,2), (1,3), True))
         self.assertFalse(p_allowed((1,2), (1,3), False))
