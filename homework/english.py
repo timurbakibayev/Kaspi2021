@@ -1,6 +1,6 @@
 """
   Дано предложение. Необходимо проверить правильность артиклей a/an.
-  Правило: перед гласной буквой и перед u,y ставим an, перед согласной - a.
+  Правило: перед гласной буквой и перед u,y ставим a, перед согласной - an.
   Не проверяем(!!!): нечитаемые согласные в начале слова, например, honor, и другие исключения в англ языке
   Правило очень простое:
   перед qwrtzuypsdfghjklmnbvcx ставим a, во всех остальных случаях an.
@@ -35,6 +35,9 @@ class TestEnglish(unittest.TestCase):
 
     def test_double_article(self):
         self.assertEqual(correct_sentense("This is a a book"), False)
+
+    def test_double_article_a_an(self):
+        self.assertEqual(correct_sentense("This is an a book"), False)
 
     def test_article_at_the_beginning(self):
         self.assertEqual(correct_sentense("A book is interesting."), True)
